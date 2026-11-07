@@ -1,0 +1,26 @@
+{
+  "name": "ZynkHighlighter",
+  "publisher": "guille-ux",
+  "displayName": "Zynk Syntax Highlight",
+  "description": "An extension for syntax highlight of zynk on VS Code",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.145.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "zynk",
+      "aliases": ["Zynk", "zynk"],
+      "extensions": [".z",".zynk",".zk",".zn"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "zynk",
+      "scopeName": "source.z",
+      "path": "./syntaxes/zynk.tmLanguage.json"
+    }]
+  }
+}

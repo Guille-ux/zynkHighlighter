@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Zynk",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#function-declarations" },
+    { "include": "#class-declarations" },
+    { "include": "#variable-declarations" },
+    { "include": "#keywords" },
+    { "include": "#booleans" },
+    { "include": "#builtins" },
+    { "include": "#numbers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.zynk",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.zynk",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.zynk",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "function-declarations": {
+      "match": "\\b(fn)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.control.zynk" },
+        "2": { "name": "entity.name.function.zynk" }
+      }
+    },
+    "class-declarations": {
+      "match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.control.zynk" },
+        "2": { "name": "entity.name.type.class.zynk" }
+      }
+    },
+    "variable-declarations": {
+      "match": "\\b(let)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.control.zynk" },
+        "2": { "name": "variable.other.assignment.zynk" }
+      }
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.zynk",
+          "match": "\\b(let|fn|return|if|then|else|fi|class|echo|del|break|for|do|done|while|or|and)\\b"
+        }
+      ]
+    },
+    "booleans": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.zynk",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.zynk",
+          "match": "\\b(min|max|push|pop|len|Array|input|include|import|index|read|write|system|clock|str|float|arg|ord|chr|getb|setb|newb|getenv|eval|chdir|listdir|cwd|rename|remove|slice|readB|writeB|list|sleep|exists)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.zynk",
+          "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.z"
+}
