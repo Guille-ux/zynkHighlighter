@@ -3,9 +3,9 @@
   "publisher": "guille-ux",
   "displayName": "Zynk Syntax Highlight",
   "description": "An extension for syntax highlight of zynk on VS Code",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
-    "vscode": "^1.145.0"
+    "vscode": "^1.138.0"
   },
   "categories": [
     "Programming Languages"
