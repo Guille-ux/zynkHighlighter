@@ -73,7 +73,7 @@
       "patterns": [
         {
           "name": "support.function.builtin.zynk",
-          "match": "\\b(min|max|push|pop|len|Array|input|include|import|index|read|write|system|clock|str|float|arg|ord|chr|getb|setb|newb|getenv|eval|chdir|listdir|cwd|rename|remove|slice|readB|writeB|list|sleep|exists)\\b"
+          "match": "\\b(pow|sqrt|ln|abs|min|max|push|pop|len|Array|input|include|import|index|read|write|system|clock|str|float|arg|ord|chr|getb|setb|newb|getenv|eval|chdir|listdir|cwd|rename|remove|slice|readB|writeB|list|sleep|exists)\\b"
         }
       ]
     },
